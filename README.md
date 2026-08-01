@@ -4,10 +4,12 @@ Welcome to my central repository for all projects, assignments, and code develop
 
 ---
 
-## 📂 Coursework Directory
+## 📁 Coursework Directory
 
 ### Year 1
+
 #### projects
-* [Java Mad Libs Game](Year1/Semester1/Java-Mad-Libs/) - A basic console input/output game practicing the `Scanner` class and string concatenation.
+* Java Mad Libs Game - A basic console input/output game practicing the `Scanner` class and string concatenation.
+* Shopping Cart Repo - A console-based shopping cart application implementing object-oriented principles, item management, and total price calculation.
 
 *(Future projects and semesters will be added here as I progress through my degree!)*
