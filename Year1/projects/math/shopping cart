@@ -1,1 +1,21 @@
+import java.util.Scanner;
 
+public class Main {
+   public Main() {
+   }
+
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      char currency = 8364;
+      System.out.print("Which item do you wish to buy: ");
+      String item = scanner.nextLine();
+      System.out.print("what is the price of each item: ");
+      double price = scanner.nextDouble();
+      System.out.print("How many to you want to buy?: ");
+      int quantity = scanner.nextInt();
+      double total = price * (double)quantity;
+      System.out.println("you bought " + quantity + " " + item + "/s");
+      System.out.print("the total = " + currency + total);
+      scanner.close();
+   }
+}
