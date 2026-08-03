@@ -1,1 +1,19 @@
+import java.util.Scanner;
 
+public class compoundInterestCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the principal amount: ");
+        double principal = input.nextDouble();
+
+        System.out.print("Enter the Annual interest rate(as a decimal): ");
+        double rate = input.nextDouble();
+
+        System.out.print("Enter the no.of years: ");
+        int years = input.nextInt();
+        
+        System.out.println("Future Value = " + (principal * Math.pow((1 + rate), years) ));
+        System.out.println("Total Interest = " + (principal * Math.pow((1 + rate), years) - principal));
+
+
+ 
