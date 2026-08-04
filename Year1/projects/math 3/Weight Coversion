@@ -1,1 +1,31 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Choose conversion type: ");
+        System.out.println("1.Kilograms to Pounds");
+        System.out.println("2.Pounds to Kilograms");
+        System.out.print("Enter your choice (1 or 2): ");
+
+        int choice = input.nextInt();
+
+        if(choice == 1){
+            System.out.print("Enter the weight in Kg: ");
+            double weight = input.nextDouble();
+            double convertweight = weight * 2.20462 * 100;
+            System.out.println(weight+ "kg is equals to "+ convertweight+ " lbs");
+
+        } else if(choice == 2){
+            System.out.print("Enter the weight in lbs: ");
+            double weight = input.nextDouble();
+            double convertweight = (weight / 2.20462 %100);
+            System.out.print(weight+ "lbs is equals to ");
+            System.out.printf("%.1f", convertweight);
+            System.out.print("kgs");
+        } else {
+            System.out.println("Pick between choice 1 or 2");
+        }
+    }
+}
