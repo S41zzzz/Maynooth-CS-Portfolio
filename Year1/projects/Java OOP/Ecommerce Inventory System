@@ -1,1 +1,67 @@
+class Product{
+    private String name;
+    private double price;
+    private int productId;
 
+    public Product(String name, double price, int productId){
+        this.name = name;
+        this.price = price;
+        this.productId = productId;
+
+    }
+    public String getName(){
+        return name;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public int getProductId(){
+        return productId;
+    }
+
+    public void displayInfo(){
+        System.out.println("Product: " + name + ", Price: $" + price);
+    }
+
+}
+
+class Book extends Product{
+    String author;
+
+    public Book(String name, double price, int productId, String author){
+        super(name, price,productId);
+        this.author = author;
+    }
+    public void displayInfo(){
+        super.displayInfo();
+        System.out.println("Name: "+ author);
+    }
+
+}
+
+class Electronics extends Product{
+    int warrantyMonths;
+
+    public Electronics(String name, double price, int productId, int warrantyMonths){
+        super(name, price, productId);
+        this.warrantyMonths = warrantyMonths;
+
+    }
+    public void displayInfo(){
+        super.displayInfo();
+        System.out.println("Warranty: " + warrantyMonths);
+    }
+}
+
+public class Main{
+    public static void main(String args[]){
+        Book myBook = new Book("The Great Gatsby", 12.99, 101, "F. Scott Fitzgerald");
+
+        myBook.displayInfo();
+
+        System.out.println();
+
+        Electronics myElectronics = new Electronics("Apple",999, 102, 24);
+        myElectronics.displayInfo();
+    }
+}
